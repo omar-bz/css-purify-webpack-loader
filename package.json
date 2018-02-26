@@ -1,12 +1,12 @@
 {
   "name": "css-purify-webpack-loader",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a webpack loader to purify css.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bouzoumita/css-purify-webpack-loader.git"
   },
-  "peerDependencies": {
+  "dependencies": {
     "purify-css": "^1.2.5"
   },
   "bugs": {

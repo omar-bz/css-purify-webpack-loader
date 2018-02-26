@@ -15,7 +15,7 @@ rules=[
           use: [
             ...
             {
-              loader: 'css-purify',
+              loader: 'css-purify-webpack-loader',
               options: {
                 includes: [
                   './pages/*.js',
