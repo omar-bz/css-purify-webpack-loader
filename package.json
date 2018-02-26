@@ -1,0 +1,23 @@
+{
+  "name": "css-purify-webpack-loader",
+  "version": "1.0.0",
+  "description": "a webpack loader to purify css.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bouzoumita/css-purify-webpack-loader.git"
+  },
+  "peerDependencies": {
+    "purify-css": "^1.2.5"
+  },
+  "bugs": {
+    "url": "https://github.com/bouzoumita/css-purify-webpack-loader/issues"
+  },
+  "homepage": "https://github.com/bouzoumita/css-purify-webpack-loader#readme",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["css-purify", "webpack", "loader"],
+  "author": "Omar Bouzoumita",
+  "license": "MIT"
+}
