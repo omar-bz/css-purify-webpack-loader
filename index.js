@@ -1,7 +1,6 @@
 const purifyCss = require('purify-css');
 module.exports = function(rawCss) {
   var includedFiles = '',
-    always = false,
     purifyCssOptions = {
       minify: true,
       info: true,
@@ -15,7 +14,7 @@ module.exports = function(rawCss) {
         'Purify-Css: no files provided, be sure to pass a array of files that respect the glob pattern through options.includes.'
       );
     }
-    always = this.query.always;
+
     if (this.query.purifyCssOptions)
       purifyCssOptions = this.query.purifyCssOptions;
   } else {
@@ -24,7 +23,11 @@ module.exports = function(rawCss) {
     );
   }
   this.cacheable && this.cacheable();
-  if (always || process.env.NODE_ENV === 'production') {
+  const cond =
+    typeof this.query.when === 'boolean'
+      ? this.query.when
+      : process.env.NODE_ENV === 'production';
+  if (cond) {
     const minifiedPurifiedCss = purifyCss(
       includedFiles,
       rawCss,
