@@ -47,3 +47,4 @@ If you want to pass options to the purify-css then use this, the default is :
 ### when:
 
 Is a boolean that specify when to run the purification, the default is `process.env.NODE_ENV === 'production'`
+
